@@ -12,14 +12,12 @@ As a BI Analyst at Clinipet, I led the data integration, transformation, and vis
 🎯 Project Goals
 HealthTail faced two major challenges:
 
-Audit Medication Purchases and Expenses
-
+1. Audit Medication Purchases and Expenses
 Automate the tracking of annual medication procurement and usage.
 
 Provide insights into medication costs and usage efficiency.
 
-Monitor Diagnoses and Disease Trends
-
+2. Monitor Diagnoses and Disease Trends
 Identify common diagnoses segmented by pet type and breed.
 
 Use trends to inform staffing, medication planning, and inventory management.
@@ -31,14 +29,12 @@ Use trends to inform staffing, medication planning, and inventory management.
 
 ✔️ Created unified, analysis-ready datasets
 
-✔️ Built an interactive Looker Studio dashboard displaying:
+✔️ Built an interactive Looker Studio dashboard displaying key metrics
 
 ✔️ Presented findings in a live client presentation
 
 📊 Dataset Description
-1. healthtail_reg_cards.csv
-Patient registration data for all pets.
-
+1. healthtail_reg_cards.csv – Patient Registration Data
 Column Name	Type	Description
 patient_id	String	Unique pet ID
 owner_id	Integer	Unique owner ID
@@ -51,11 +47,9 @@ patient_age	Integer	Age in years
 date_registration	Date	Registration date
 owner_phone	String	Contact number (incl. country code)
 
-🔧 Note: Contains manual entry errors, missing values, and inconsistent formats.
+⚠️ Note: Contains manual entry errors, missing values, and inconsistent formats.
 
-2. visits.csv
-Medical visit logs including diagnoses and prescriptions.
-
+2. visits.csv – Medical Visit Logs
 Column Name	Type	Description
 visit_id	String	Unique ID per visit
 patient_id	String	Pet associated with the visit
@@ -66,9 +60,7 @@ med_prescribed	String	Medication prescribed
 med_dosage	Float	Dosage (as a share of a full package)
 med_cost	Float	Cost of prescribed medication
 
-3. invoices.csv
-Financial records of medication purchases.
-
+3. invoices.csv – Medication Purchase Records
 Column Name	Type	Description
 month_invoice	Date	Month and year of invoice
 invoice_id	String	Unique invoice identifier
@@ -83,50 +75,42 @@ Google BigQuery – Data warehousing, SQL analysis, ETL
 
 Looker Studio – Interactive dashboard creation
 
-
 🧹 Data Cleaning
 Standardized inconsistent phone numbers and names
 
-Replaced Null Breed values with "Unknown"
+Replaced null or missing breed values with "Unknown"
 
-Fixed Owner_name, some names contained a 'Mr' or a 'Mrs' so removed that part for consistency
+Removed titles like Mr, Mrs from owner names for consistency
 
-Standardized the patient_name to all be lowercase and capitalized
+Standardized patient names to lowercase and capitalized format
 
 📈 Key Insights
-This analysis helped HealthTail uncover valuable insights into medication use, diagnosis trends, and cost patterns. Here are the key business questions we addressed:
+This analysis helped HealthTail uncover valuable insights into medication use, diagnosis trends, and cost patterns. Key questions and findings include:
 
-🐾 What are the most common diagnoses and diseases overall? How do they break down by pet type?
-
-Identified top diagnoses across all visits, with clear segmentation between dogs and cats, revealing species-specific health concerns.
+🐾 What are the most common diagnoses and diseases overall?
+Identified top diagnoses across all visits, segmented by pet type.
 
 🐕‍🦺 Which diseases are most prevalent among specific breeds?
+Mapped breed-specific diagnosis trends to support tailored care.
 
-Mapped breed-specific diagnosis trends, helping the clinic better prepare for breed-related health issues and tailor preventive care.
-
-💸 Which diseases incur the highest spending, and how frequently do they appear in the data?
-
-Combined visit and invoice data to highlight the most financially impactful diseases — balancing frequency with medication cost.
+💸 Which diseases incur the highest spending, and how frequently do they appear?
+Highlighted the most costly diseases by frequency and financial impact.
 
 🧬 Are certain pet types more susceptible to specific diseases or associated with higher treatment costs?
-
-Cross-analysis of pet type, diagnosis, and cost data revealed which species tend to require more expensive care or are more prone to chronic conditions.
+Dogs and cats exhibit different vulnerabilities and cost patterns.
 
 📅 How does age influence the prevalence of certain diseases?
-
-Created age-group breakdowns to uncover patterns such as senior pets being more susceptible to chronic diseases, aiding in proactive care planning.
+Senior pets showed increased likelihood of chronic disease diagnoses.
 
 📊 How does spending on medications change over time?
-
-Analyzed monthly invoice trends to identify periods of peak spending, supplier dependencies, and opportunities for inventory optimization.
+Monthly trends revealed seasonal spikes and bulk procurement behaviors.
 
 📈 Is there an increase in diagnoses of certain types over time?
-
-Tracked changes in diagnosis rates over time, signaling emerging health trends or seasonal patterns in disease outbreaks.
+Some conditions showed steady growth, prompting further monitoring.
 
 🧠 Lessons Learned
-Importance of clean, well-structured source data in building meaningful dashboards
+The importance of clean, structured source data in building meaningful dashboards
 
-How to design scalable schemas for analytical use cases
+How to design scalable schemas for real-world analytical use cases
 
-Effective use of Looker Studio to communicate complex findings to non-technical stakeholders
+Leveraging Looker Studio for clear communication with non-technical stakeholders
