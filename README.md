@@ -79,6 +79,8 @@ Use trends to inform staffing, medication planning, and inventory management.
 | packs         | Float   | Number of packs purchased                       |
 | price         | Float   | Price per pack                                 |
 | total_price   | Float   | Total transaction cost (packs × price)         |
+
+---
 ⚙️ Tools & Technologies
 Google BigQuery – Data warehousing, SQL analysis, ETL
 
