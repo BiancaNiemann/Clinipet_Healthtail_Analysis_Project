@@ -49,9 +49,9 @@ Use trends to inform staffing, medication planning, and inventory management.
 | date_registration | Date    | Registration date                                   |
 | owner_phone       | String  | Contact number (incl. country code)                 |
 
+⚠️ Note: Contains manual entry errors, missing values, and inconsistent formats.
 ---
 
-⚠️ Note: Contains manual entry errors, missing values, and inconsistent formats.
 
 ### `visits.csv` – Medical Visit Logs
 
