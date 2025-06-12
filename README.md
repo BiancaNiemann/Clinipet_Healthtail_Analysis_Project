@@ -34,42 +34,51 @@ Use trends to inform staffing, medication planning, and inventory management.
 ✔️ Presented findings in a live client presentation
 
 📊 Dataset Description
-1. healthtail_reg_cards.csv – Patient Registration Data
-Column Name	Type	Description
-patient_id	String	Unique pet ID
-owner_id	Integer	Unique owner ID
-owner_name	String	Owner's full name
-pet_type	String	Species (e.g., Dog, Cat)
-breed	String	Breed of the pet
-patient_name	String	Name of the pet
-gender	String	Gender of the pet
-patient_age	Integer	Age in years
-date_registration	Date	Registration date
-owner_phone	String	Contact number (incl. country code)
+### `healthtail_reg_cards.csv` – Patient Registration Data
+
+| Column Name       | Type    | Description                                         |
+|-------------------|---------|-----------------------------------------------------|
+| patient_id        | String  | Unique pet ID                                       |
+| owner_id          | Integer | Unique owner ID                                     |
+| owner_name        | String  | Owner's full name                                   |
+| pet_type          | String  | Species (e.g., Dog, Cat)                            |
+| breed             | String  | Breed of the pet                                    |
+| patient_name      | String  | Name of the pet                                     |
+| gender            | String  | Gender of the pet                                   |
+| patient_age       | Integer | Age in years                                        |
+| date_registration | Date    | Registration date                                   |
+| owner_phone       | String  | Contact number (incl. country code)                 |
+
+---
 
 ⚠️ Note: Contains manual entry errors, missing values, and inconsistent formats.
 
-2. visits.csv – Medical Visit Logs
-Column Name	Type	Description
-visit_id	String	Unique ID per visit
-patient_id	String	Pet associated with the visit
-visit_datetime	DateTime	Timestamp of visit
-doctor	String	Attending veterinarian
-diagnosis	String	Diagnosis given
-med_prescribed	String	Medication prescribed
-med_dosage	Float	Dosage (as a share of a full package)
-med_cost	Float	Cost of prescribed medication
+### `visits.csv` – Medical Visit Logs
 
-3. invoices.csv – Medication Purchase Records
-Column Name	Type	Description
-month_invoice	Date	Month and year of invoice
-invoice_id	String	Unique invoice identifier
-supplier	String	Supplier name
-med_name	String	Name of medication purchased
-packs	Float	Number of packs purchased
-price	Float	Price per pack
-total_price	Float	Total transaction cost (packs × price)
+| Column Name    | Type     | Description                                       |
+|----------------|----------|-------------------------------------------------|
+| visit_id       | String   | Unique ID per visit                              |
+| patient_id     | String   | Pet associated with the visit                    |
+| visit_datetime | DateTime | Timestamp of visit                               |
+| doctor         | String   | Attending veterinarian                           |
+| diagnosis      | String   | Diagnosis given                                 |
+| med_prescribed | String   | Medication prescribed                            |
+| med_dosage     | Float    | Dosage (as a share of a full package)           |
+| med_cost       | Float    | Cost of prescribed medication                    |
 
+---
+
+### `invoices.csv` – Medication Purchase Records
+
+| Column Name   | Type    | Description                                     |
+|---------------|---------|------------------------------------------------|
+| month_invoice | Date    | Month and year of invoice                       |
+| invoice_id    | String  | Unique invoice identifier                       |
+| supplier      | String  | Supplier name                                  |
+| med_name      | String  | Name of medication purchased                    |
+| packs         | Float   | Number of packs purchased                       |
+| price         | Float   | Price per pack                                 |
+| total_price   | Float   | Total transaction cost (packs × price)         |
 ⚙️ Tools & Technologies
 Google BigQuery – Data warehousing, SQL analysis, ETL
 
