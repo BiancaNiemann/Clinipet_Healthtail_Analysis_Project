@@ -4,7 +4,7 @@
 ##### Organization: Clinipet – IT & Analytics Solutions for Veterinary Clinics and Pet Hotels
 ##### Timeline: Early 2026
 
-📘 Project Overview
+### 📘 Project Overview
 HealthTail, one of the largest veterinary hospitals in the city, partnered with Clinipet to modernize their manual medication auditing processes and gain deeper insights into disease and diagnosis trends among their patients.
 
 As a BI Analyst at Clinipet, I led the data integration, transformation, and visualization efforts to deliver actionable insights via an interactive dashboard. This project combines ETL pipelines in BigQuery and interactive reporting in Looker Studio to support data-driven decisions in veterinary care.
