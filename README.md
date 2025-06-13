@@ -111,7 +111,7 @@ A query was written to aggregate this information and output a new table called 
 
 <img width="680" alt="image" src="https://github.com/user-attachments/assets/ed3c32a6-d1cf-4d44-8b3c-d67ad1ac242b" />
 
-View the SQL queries in (./sql_files/Step_1.sql)
+View the SQL queries in [Step 1](./sql_files/Step_1.sql)
 
 ---
 
@@ -135,7 +135,7 @@ The following business questions were provided by HealthTail. For each, I wrote 
 <img width="927" alt="image" src="https://github.com/user-attachments/assets/5ccfdc01-7c28-454b-bf96-1e80a19d9b37" />
 <img width="985" alt="image" src="https://github.com/user-attachments/assets/a6dd6708-cbf3-4eb7-9179-a147fcbbbe63" />
 
-View the SQL queries in (./sql_files/Step_2.sql)
+View the SQL queries in [Step 2](./sql_files/Step_2.sql)
 ---
 
 ## 📈 Step 3 – Creating Interactive Report in Looker Studio
