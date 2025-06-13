@@ -111,6 +111,8 @@ A query was written to aggregate this information and output a new table called 
 
 <img width="680" alt="image" src="https://github.com/user-attachments/assets/ed3c32a6-d1cf-4d44-8b3c-d67ad1ac242b" />
 
+View the SQL queries in (./sql_files/Step_1.sql)
+
 ---
 
 ## 📊 Step 2 – Answering Research Questions with SQL
@@ -133,6 +135,7 @@ The following business questions were provided by HealthTail. For each, I wrote 
 <img width="927" alt="image" src="https://github.com/user-attachments/assets/5ccfdc01-7c28-454b-bf96-1e80a19d9b37" />
 <img width="985" alt="image" src="https://github.com/user-attachments/assets/a6dd6708-cbf3-4eb7-9179-a147fcbbbe63" />
 
+View the SQL queries in (./sql_files/Step_2.sql)
 ---
 
 ## 📈 Step 3 – Creating Interactive Report in Looker Studio
@@ -189,3 +192,8 @@ The importance of clean, structured source data in building meaningful dashboard
 How to design scalable schemas for real-world analytical use cases
 
 Leveraging Looker Studio for clear communication with non-technical stakeholders
+
+## 🎥 Demo & Dashboard
+
+- 📽️ **Video Presentation:** [Watch here]([https://your-video-link.com](https://www.loom.com/share/f44ae7b2204340099bb59e713af6c135?sid=039a7b60-0b9b-4a77-bdef-77e76fc7d65e))
+- 📊 **Interactive Dashboard:** [View Looker Studio Report]([https://your-looker-dashboard-link.com](https://lookerstudio.google.com/reporting/0ff0031a-0ea0-41f7-83ac-5018996ddc52/page/p_drybey9btd/edit))
