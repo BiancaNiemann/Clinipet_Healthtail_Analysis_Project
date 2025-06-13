@@ -9,20 +9,19 @@ HealthTail, one of the largest veterinary hospitals in the city, partnered with 
 
 As a BI Analyst at Clinipet, I led the data integration, transformation, and visualization efforts to deliver actionable insights via an interactive dashboard. This project combines ETL pipelines in BigQuery and interactive reporting in Looker Studio to support data-driven decisions in veterinary care.
 
-🎯 Project Goals
+### 🎯 Project Goals
 HealthTail faced two major challenges:
 
 1. Audit Medication Purchases and Expenses
-Automate the tracking of annual medication procurement and usage.
-
-Provide insights into medication costs and usage efficiency.
+* Automate the tracking of annual medication procurement and usage.
+* Provide insights into medication costs and usage efficiency.
 
 2. Monitor Diagnoses and Disease Trends
-Identify common diagnoses segmented by pet type and breed.
+* Identify common diagnoses segmented by pet type and breed.
 
 Use trends to inform staffing, medication planning, and inventory management.
 
-✅ Deliverables
+### ✅ Deliverables
 ✔️ Uploaded and structured source .csv files in BigQuery
 
 ✔️ Cleaned and transformed raw data to correct errors and inconsistencies
@@ -33,8 +32,8 @@ Use trends to inform staffing, medication planning, and inventory management.
 
 ✔️ Presented findings in a live client presentation
 
-📊 Dataset Description
-### `healthtail_reg_cards.csv` – Patient Registration Data
+### 📊 Dataset Description
+#### `healthtail_reg_cards.csv` – Patient Registration Data
 
 | Column Name       | Type    | Description                                         |
 |-------------------|---------|-----------------------------------------------------|
@@ -53,7 +52,7 @@ Use trends to inform staffing, medication planning, and inventory management.
 ---
 
 
-### `visits.csv` – Medical Visit Logs
+#### `visits.csv` – Medical Visit Logs
 
 | Column Name    | Type     | Description                                       |
 |----------------|----------|-------------------------------------------------|
@@ -68,7 +67,7 @@ Use trends to inform staffing, medication planning, and inventory management.
 
 ---
 
-### `invoices.csv` – Medication Purchase Records
+#### `invoices.csv` – Medication Purchase Records
 
 | Column Name   | Type    | Description                                     |
 |---------------|---------|------------------------------------------------|
@@ -81,45 +80,33 @@ Use trends to inform staffing, medication planning, and inventory management.
 | total_price   | Float   | Total transaction cost (packs × price)         |
 
 ---
-⚙️ Tools & Technologies
-Google BigQuery – Data warehousing, SQL analysis, ETL
+### ⚙️ Tools & Technologies
+* Google BigQuery – Data warehousing, SQL analysis, ETL
 
-Looker Studio – Interactive dashboard creation
+* Looker Studio – Interactive dashboard creation
 
-🧹 Data Cleaning
-Standardized inconsistent phone numbers and names
+### 🧹 Data Cleaning
+* Standardized inconsistent phone numbers and names
 
-Replaced null or missing breed values with "Unknown"
+* Replaced null or missing breed values with "Unknown"
 
-Removed titles like Mr, Mrs from owner names for consistency
+* Removed titles like Mr, Mrs from owner names for consistency
 
-Standardized patient names to lowercase and capitalized format
+* Standardized patient names to lowercase and capitalized format
 
-📈 Key Insights
+### 📈 Key Insights
 This analysis helped HealthTail uncover valuable insights into medication use, diagnosis trends, and cost patterns. Key questions and findings include:
 
 🐾 What are the most common diagnoses and diseases overall?
-Identified top diagnoses across all visits, segmented by pet type.
-
 🐕‍🦺 Which diseases are most prevalent among specific breeds?
-Mapped breed-specific diagnosis trends to support tailored care.
-
 💸 Which diseases incur the highest spending, and how frequently do they appear?
-Highlighted the most costly diseases by frequency and financial impact.
-
 🧬 Are certain pet types more susceptible to specific diseases or associated with higher treatment costs?
-Dogs and cats exhibit different vulnerabilities and cost patterns.
-
 📅 How does age influence the prevalence of certain diseases?
-Senior pets showed increased likelihood of chronic disease diagnoses.
-
 📊 How does spending on medications change over time?
-Monthly trends revealed seasonal spikes and bulk procurement behaviors.
-
 📈 Is there an increase in diagnoses of certain types over time?
-Some conditions showed steady growth, prompting further monitoring.
 
-🧠 Lessons Learned
+
+### 🧠 Lessons Learned
 The importance of clean, structured source data in building meaningful dashboards
 
 How to design scalable schemas for real-world analytical use cases
