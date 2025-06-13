@@ -195,5 +195,5 @@ Leveraging Looker Studio for clear communication with non-technical stakeholders
 
 ## 🎥 Demo & Dashboard
 
-- 📽️ **Video Presentation:** [Watch here]([https://your-video-link.com](https://www.loom.com/share/f44ae7b2204340099bb59e713af6c135?sid=039a7b60-0b9b-4a77-bdef-77e76fc7d65e))
-- 📊 **Interactive Dashboard:** [View Looker Studio Report]([https://your-looker-dashboard-link.com](https://lookerstudio.google.com/reporting/0ff0031a-0ea0-41f7-83ac-5018996ddc52/page/p_drybey9btd/edit))
+- 📽️ **Video Presentation:** [Watch here](https://www.loom.com/share/f44ae7b2204340099bb59e713af6c135?sid=039a7b60-0b9b-4a77-bdef-77e76fc7d65e)
+- 📊 **Interactive Dashboard:** [View Looker Studio Report](https://lookerstudio.google.com/reporting/0ff0031a-0ea0-41f7-83ac-5018996ddc52/page/p_drybey9btd/edit)
