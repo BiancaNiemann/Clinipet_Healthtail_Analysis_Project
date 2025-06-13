@@ -22,15 +22,15 @@ HealthTail faced two major challenges:
 Use trends to inform staffing, medication planning, and inventory management.
 
 ### ✅ Deliverables
-✔️ Uploaded and structured source .csv files in BigQuery
+✔️ Upload and structur source .csv files in BigQuery
 
-✔️ Cleaned and transformed raw data to correct errors and inconsistencies
+✔️ Clean and transform raw data to correct errors and inconsistencies
 
-✔️ Created unified, analysis-ready datasets
+✔️ Create unified, analysis-ready datasets
 
-✔️ Built an interactive Looker Studio dashboard displaying key metrics
+✔️ Build an interactive Looker Studio dashboard displaying key metrics
 
-✔️ Presented findings in a live client presentation
+✔️ Present findings in a live client presentation
 
 ### 📊 Dataset Description
 #### `healthtail_reg_cards.csv` – Patient Registration Data
@@ -85,25 +85,102 @@ Use trends to inform staffing, medication planning, and inventory management.
 
 * Looker Studio – Interactive dashboard creation
 
-### 🧹 Data Cleaning
-* Standardized inconsistent phone numbers and names
+## 🛠️ Step 1 – Creating Clean and Aggregated Data
 
-* Replaced null or missing breed values with "Unknown"
+### 1. 🔧 Data Cleaning
 
-* Removed titles like Mr, Mrs from owner names for consistency
+To ensure the data was analysis-ready, the following cleaning steps were applied:
 
-* Standardized patient names to lowercase and capitalized format
+- Standardized inconsistent phone numbers and names
+- Replaced null or missing `breed` values with `"Unknown"`
+- Removed titles like *Mr*, *Mrs* from `owner_name` for consistency
+- Standardized `patient_name` to lowercase and capitalized format
 
-### 📈 Key Insights
-This analysis helped HealthTail uncover valuable insights into medication use, diagnosis trends, and cost patterns. Key questions and findings include:
+---
 
-🐾 What are the most common diagnoses and diseases overall?
-🐕‍🦺 Which diseases are most prevalent among specific breeds?
-💸 Which diseases incur the highest spending, and how frequently do they appear?
-🧬 Are certain pet types more susceptible to specific diseases or associated with higher treatment costs?
-📅 How does age influence the prevalence of certain diseases?
-📊 How does spending on medications change over time?
-📈 Is there an increase in diagnoses of certain types over time?
+### 2. 📦 Aggregated Table: `healthtail_med_audit`
+
+HealthTail requested a dedicated monthly medication tracking table that includes both:
+
+- **Purchases** (from the `invoices` table) - stock in
+- **Usage** (from the `visits` table) - stock out
+
+A query was written to aggregate this information and output a new table called `healthtail_med_audit`, saved in the `integrations` folder.
+
+📌 *Below is a preview of the first 10 rows of the `healthtail_med_audit` table.*
+
+<img width="680" alt="image" src="https://github.com/user-attachments/assets/ed3c32a6-d1cf-4d44-8b3c-d67ad1ac242b" />
+
+---
+
+## 📊 Step 2 – Answering Research Questions with SQL
+
+The following business questions were provided by HealthTail. For each, I wrote SQL queries in BigQuery to extract insights.
+
+### 1️⃣ What medication did we spend the most money on in total?
+<img width="927" alt="image" src="https://github.com/user-attachments/assets/00a64b23-e3c1-4347-ac14-353c794f068f" />
+<img width="982" alt="image" src="https://github.com/user-attachments/assets/ef5947b0-e67c-4aad-929e-c4fd456de245" />
+
+### 2️⃣ What medication had the highest monthly `total_value` spent on patients? At what month?
+<img width="923" alt="image" src="https://github.com/user-attachments/assets/92e7fae7-c563-4d58-9970-e5af63d35026" />
+<img width="459" alt="image" src="https://github.com/user-attachments/assets/4fb881d9-0d0f-4f8b-8617-aa3a68285919" />
+
+### 3️⃣ What month was the highest in packs of meds spent in the vet clinic?
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/01f477c8-8396-4432-befc-8380cc3dc0d0" />
+<img width="986" alt="image" src="https://github.com/user-attachments/assets/0bd4e18f-6b81-4d33-99a1-bbefeb374738" />
+
+### 4️⃣ What’s the average monthly amount of packs spent on the med that generated the most revenue?
+<img width="927" alt="image" src="https://github.com/user-attachments/assets/5ccfdc01-7c28-454b-bf96-1e80a19d9b37" />
+<img width="985" alt="image" src="https://github.com/user-attachments/assets/a6dd6708-cbf3-4eb7-9179-a147fcbbbe63" />
+
+---
+
+## 📈 Step 3 – Creating Interactive Report in Looker Studio
+
+HealthTail management required a powerful, user-friendly dashboard to:
+
+- Monitor **common diagnoses**
+- Track **disease prevalence by breed**
+- Analyze **medication spending trends**
+
+The dashboard was designed to be interactive and support:
+
+- 📌 Drill-down functionality  
+- 📊 A variety of visualization types (bar charts, line graphs, heatmaps, etc.)
+
+---
+
+### 📌 HealthTail Key Concerns Addressed in Dashboard
+
+Each concern is paired with an appropriate chart in the Looker Studio dashboard:
+
+1. **What are the most common diagnoses and diseases overall?**  
+   ➤ Breakdowns provided by pet type (e.g., dog vs. cat vs. hamster)
+<img width="421" alt="image" src="https://github.com/user-attachments/assets/7546dbf9-aa1a-4e87-a0c0-875d2e296711" />
+
+2. **Which diseases are most prevalent among specific breeds?**  
+   ➤ Enables tailored care and better inventory planning
+<img width="415" alt="image" src="https://github.com/user-attachments/assets/42f1dff3-f221-463a-aa1a-6ef114cef8d8" />
+
+3. **Which diseases incur the highest spending, and how frequently do they appear in the data?**  
+   ➤ Highlights costly recurring conditions
+<img width="346" alt="image" src="https://github.com/user-attachments/assets/c1056e7e-26b6-49ee-833c-5e68eb9a1152" />
+
+4. **Are certain pet types (e.g., dogs, cats, hamsters) more susceptible to specific diseases or associated with higher treatment costs?**  
+   ➤ Supports budgeting and veterinary resourcing
+<img width="351" alt="image" src="https://github.com/user-attachments/assets/d3390ebb-5b7e-494d-80e1-e5d7980ddebd" />
+
+5. **How does age influence the prevalence of certain diseases?**  
+   ➤ Age-group trends help guide preventive care
+<img width="776" alt="image" src="https://github.com/user-attachments/assets/9747263b-0375-4b80-b287-da8105d141c8" />
+
+6. **How does spending on medications change over time?**  
+   ➤ Tracks inventory and supplier patterns
+<img width="835" alt="image" src="https://github.com/user-attachments/assets/f785ce9f-8743-4153-ac95-a0b44327131d" />
+
+7. **Is there an increase in diagnoses of certain types over time?**  
+   ➤ Flags potential seasonal trends or outbreaks
+<img width="841" alt="image" src="https://github.com/user-attachments/assets/f06aefda-6cfb-470f-98ea-8e36977d5687" />
 
 
 ### 🧠 Lessons Learned
