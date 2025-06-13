@@ -1,4 +1,4 @@
-🐾 Clinipet - HealthTail Analysis Project
+# 🐾 Clinipet - HealthTail Analysis Project
 Role: Business Intelligence Analyst
 Client: HealthTail Veterinary Hospital
 Organization: Clinipet – IT & Analytics Solutions for Veterinary Clinics and Pet Hotels
